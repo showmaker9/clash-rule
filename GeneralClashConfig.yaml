@@ -1,0 +1,32 @@
+dns:
+  enable: true
+  device-off-interface-name: auto
+  # ipv6: false # 如果你不需要 IPv6，建议关闭以防 IPv6 泄露
+  enhanced-mode: fake-ip # 核心设置：使用虚假 IP 模式，物理隔离本地解析
+  fake-ip-range: 198.18.0.1/16
+  listen: 0.0.0.0:1053
+  
+  # 预解析服务器：用于解析 DoH 链接的域名
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
+
+  # 国内解析服务器：仅用于解析国内域名
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+
+  # 国外解析服务器：当 Fake-IP 模式需要验证或特殊情况时使用（走代理）
+  fallback:
+    - https://dns.google/dns-query
+    - https://1.1.1.1/dns-query
+    - https://8.8.8.8/dns-query
+
+  # 智能过滤：防止 DNS 污染
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
