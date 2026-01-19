@@ -156,7 +156,6 @@ const main = (config) => {
       type: "select",
       proxies: ["DIRECT", "🇭🇰 香港节点", "🚀 手动切换"]
     },
-    {
      {
       name: "🎮 游戏平台",
       type: "select",
