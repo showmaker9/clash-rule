@@ -1,4 +1,5 @@
 const main = (config) => {
+  // =======================================================
   // 1. DNS 防泄漏配置
   // =======================================================
   config.dns = {
@@ -28,37 +29,44 @@ const main = (config) => {
       "domain": ["+.google.com", "+.facebook.com", "+.youtube.com", "+.twitter.com", "+.openai.com"]
     }
   };
-  
-  // 2. 定义规则集 (Rule Providers)
+
   // =======================================================
+  // 2. 定义规则集 (Rule Providers) - 使用 CDN 加速
+  // =======================================================
+  
+  // 定义 CDN 前缀，解决 GitHub 无法访问导致规则不生效的问题
+  const cdn = "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/";
+  const cdnLite = "https://cdn.jsdelivr.net/gh/ACL4SSR/ACL4SSR@master/Clash/Ruleset/";
+  
   const providers = {
-    "LocalAreaNetwork": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list",
-    "UnBan": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list",
-    "SteamCN": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list",
-    "BanAD": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanAD.list",
-    "BanProgramAD": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanProgramAD.list",
-    "BanEasyListChina": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/BanEasyListChina.list",
-    "YouTube": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list",
-    "GoogleFCM": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list",
-    "GoogleCNProxyIP": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCNProxyIP.list",
-    "GoogleCN": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleCN.list",
-    "Google": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Google.list",
-    "Telegram": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list",
-    "Bing": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Bing.list",
-    "AI": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/AI.list",
-    "OpenAi": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/OpenAi.list",
-    "Epic": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list",
-    "Origin": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Origin.list",
-    "Sony": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Sony.list",
-    "Steam": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list",
-    "Nintendo": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Nintendo.list",
-    "ChinaMedia": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list",
-    "ProxyMedia": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list",
-    "CloudflareCIDR": "https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/CloudflareCIDR.list",
-    "ProxyGFWlist": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list",
-    "ChinaDomain": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list",
-    "ChinaCompanyIp": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list",
-    "ChinaIp": "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaIp.list"
+    "LocalAreaNetwork": cdn + "LocalAreaNetwork.list",
+    "UnBan": cdn + "UnBan.list",
+    "SteamCN": cdnLite + "SteamCN.list",
+    "BanAD": cdn + "BanAD.list",
+    "BanProgramAD": cdn + "BanProgramAD.list",
+    "BanEasyListChina": cdn + "BanEasyListChina.list",
+    "YouTube": cdnLite + "YouTube.list",
+    "GoogleFCM": cdnLite + "GoogleFCM.list",
+    "GoogleCNProxyIP": cdnLite + "GoogleCNProxyIP.list",
+    "GoogleCN": cdnLite + "GoogleCN.list",
+    "Google": cdnLite + "Google.list",
+    "Telegram": cdn + "Telegram.list",
+    "Bing": cdn + "Bing.list",
+    "AI": cdnLite + "AI.list",
+    "OpenAi": cdnLite + "OpenAi.list",
+    "Epic": cdnLite + "Epic.list",
+    "Origin": cdnLite + "Origin.list",
+    "Sony": cdnLite + "Sony.list",
+    "Steam": cdnLite + "Steam.list",
+    "Nintendo": cdnLite + "Nintendo.list",
+    "ChinaMedia": cdn + "ChinaMedia.list",
+    "ProxyMedia": cdn + "ProxyMedia.list",
+    // CloudflareCIDR 使用 cmliu 的库，单独处理
+    "CloudflareCIDR": "https://cdn.jsdelivr.net/gh/cmliu/ACL4SSR@main/Clash/CloudflareCIDR.list",
+    "ProxyGFWlist": cdn + "ProxyGFWlist.list",
+    "ChinaDomain": cdn + "ChinaDomain.list",
+    "ChinaCompanyIp": cdn + "ChinaCompanyIp.list",
+    "ChinaIp": cdn + "ChinaIp.list"
   };
 
   const ruleProviders = {};
@@ -73,7 +81,7 @@ const main = (config) => {
   });
 
   // =======================================================
-  // 3. 处理代理节点 (正则筛选)
+  // 3. 处理代理节点
   // =======================================================
   const proxies = config.proxies || [];
   const proxyNames = proxies.map(p => p.name);
@@ -83,12 +91,12 @@ const main = (config) => {
 
   const hkProxies = proxyNames.filter(n => regexHK.test(n));
   const usProxies = proxyNames.filter(n => regexUS.test(n));
-  // 修复：移除 "🚀 节点选择" 以防止循环引用
+  
   if (hkProxies.length === 0) hkProxies.push("🚀 手动切换", "DIRECT");
   if (usProxies.length === 0) usProxies.push("🚀 手动切换", "DIRECT");
 
   // =======================================================
-  // 4. 定义策略组 (Proxy Groups)
+  // 4. 定义策略组
   // =======================================================
   const groups = [
     {
@@ -156,7 +164,7 @@ const main = (config) => {
       type: "select",
       proxies: ["DIRECT", "🇭🇰 香港节点", "🚀 手动切换"]
     },
-     {
+    {
       name: "🎮 游戏平台",
       type: "select",
       proxies: ["DIRECT", "🚀 节点选择", "🇺🇲 美国节点", "🇭🇰 香港节点", "🚀 手动切换"]
@@ -182,9 +190,9 @@ const main = (config) => {
       proxies: ["REJECT", "DIRECT"]
     }
   ];
+
   // =======================================================
-  // 5. 定义规则 (Rules)
-  //    注意：严格按照你提供的顺序排列
+  // 5. 定义规则
   // =======================================================
   const rules = [
     "RULE-SET,LocalAreaNetwork,🎯 全球直连",
@@ -209,23 +217,17 @@ const main = (config) => {
     "RULE-SET,Sony,🎮 游戏平台",
     "RULE-SET,Steam,🎮 游戏平台",
     "RULE-SET,Nintendo,🎮 游戏平台",
-    "RULE-SET,ChinaMedia,🌏 国内媒体", // 已确认：保留此处，归属国内媒体
+    "RULE-SET,ChinaMedia,🌏 国内媒体",
     "RULE-SET,ProxyMedia,🌍 国外媒体",
     "RULE-SET,CloudflareCIDR,☁️ CloudFlareCDN",
     "RULE-SET,ProxyGFWlist,🚀 节点选择",
     "RULE-SET,ChinaDomain,🎯 全球直连",
     "RULE-SET,ChinaCompanyIp,🎯 全球直连",
-    // 已删除：此处原有的 ChinaMedia -> 🎯 全球直连
     "RULE-SET,ChinaIp,🎯 全球直连",
-    // 已添加 no-resolve
     "GEOIP,CN,🎯 全球直连,no-resolve",
-    
     "MATCH,🐟 漏网之鱼"
   ];
 
-  // =======================================================
-  // 6. 组装输出
-  // =======================================================
   config["rule-providers"] = ruleProviders;
   config["proxy-groups"] = groups;
   config["rules"] = rules;
