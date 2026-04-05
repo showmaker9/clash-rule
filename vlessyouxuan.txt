@@ -1,0 +1,29 @@
+mfa.gov.ua:443#官方-乌克兰-US
+shops.myshopify.com:2053#官方-myshopify--US
+time.is:2083#官方-time.is-US
+www.shopify.com:2087#官方-shopify-HK
+store.ubi.com:2096#官方-Ubisoft-HK
+staticdelivery.nexusmods.com:8443#官方-NexusMods-HK
+
+11.cf.090227.xyz:443#cm优选HK/US
+cf.877774.xyz:2053#秋名山优选 HK
+cf.cloudflare.182682.xyz:2083#WeTest优选 US
+cf.tencentapp.cn:2087#tencentapp HK
+saas.sin.fan:2096#saas.sin.fanMIYU优选 HK
+dogechain.info:8443#dogechain.info优选 US
+
+
+172.67.69.4:8443#HK-11.83 MB/s
+104.16.44.217:8443#US-6.39 MB/s
+104.17.79.30:443#hk-移动
+123.57.82.95:443#US
+
+120.79.234.236:443#移动优选1荷兰20
+120.26.3.169:443#移动优选2 US100
+120.55.183.176:443#移动优选3 US100
+47.92.245.88:443#移动优选4 US22
+47.109.177.88:443##移动优选5 US100
+69.63.215.86:23456#US1-AS58807
+74.211.111.3:27015#US2-AS58807
+38.207.188.139:443#US3-AS58807
+123.57.82.95:443#US
