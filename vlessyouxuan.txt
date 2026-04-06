@@ -1,16 +1,16 @@
-mfa.gov.ua:443#官方-乌克兰-US
-shops.myshopify.com:2053#官方-myshopify--US
-time.is:2083#官方-time.is-US
-www.shopify.com:2087#官方-shopify-HK
-store.ubi.com:2096#官方-Ubisoft-HK
-staticdelivery.nexusmods.com:8443#官方-NexusMods-HK
+mfa.gov.ua:443#官方-乌克兰
+shops.myshopify.com:2053#官方-myshopify
+time.is:2083#官方-time.is
+www.shopify.com:2087#官方-shopify
+store.ubi.com:2096#官方-Ubisoft
+staticdelivery.nexusmods.com:8443#官方-NexusMods
 
-11.cf.090227.xyz:443#cm优选HK/US
-cf.877774.xyz:2053#秋名山优选 HK
-cf.cloudflare.182682.xyz:2083#WeTest优选 US
-cf.tencentapp.cn:2087#tencentapp HK
-saas.sin.fan:2096#saas.sin.fanMIYU优选 HK
-dogechain.info:8443#dogechain.info优选 US
+11.cf.090227.xyz:443#域名-CM
+cf.877774.xyz:2053#域名-秋名山
+cf.cloudflare.182682.xyz:2083#域名-WeTest
+cf.tencentapp.cn:2087#域名-tencentapp
+saas.sin.fan:2096#域名-saas.sin.fan
+dogechain.info:8443#域名-dogechain.info
 
 
 120.79.234.236:443#国内优选荷兰20
