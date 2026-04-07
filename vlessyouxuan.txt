@@ -1,13 +1,12 @@
-mfa.gov.ua:443#官方-乌克兰
+mfa.gov.ua:443#官方-mfa
 shops.myshopify.com:2053#官方-myshopify
 time.is:2083#官方-time.is
 www.shopify.com:2087#官方-shopify
 store.ubi.com:2096#官方-Ubisoft
-staticdelivery.nexusmods.com:8443#官方-NexusMods
+
 
 11.cf.090227.xyz:443#域名-CM
 cf.877774.xyz:2053#域名-秋名山
-cf.cloudflare.182682.xyz:2083#域名-WeTest
 cf.tencentapp.cn:2087#域名-tencentapp
 saas.sin.fan:2096#域名-saas.sin.fan
 dogechain.info:8443#域名-dogechain.info
