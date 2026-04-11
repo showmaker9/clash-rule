@@ -1,10 +1,11 @@
+ir.huya.com#官方-虎牙
+ir.miniso.com#官方-名创优品
+vmiss.664667.xyz:443#域名-sg
+
 mfa.gov.ua:443#官方-mfa.gov
 www.shopify.com:2087#官方-shopify
 shops.myshopify.com:2053#官方-myshopify
 time.is:2083#官方-time.is
-ir.huya.com#官方-虎牙
-ir.miniso.com#官方-名创优品
-
 cf.tencentapp.cn:2087#域名-tencentapp
 saas.sin.fan:2096#域名-saas.sin.fan
 dogechain.info:8443#域名-dogechain.info
