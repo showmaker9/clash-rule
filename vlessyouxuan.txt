@@ -1,15 +1,8 @@
+104.17.187.66#HK 30MB/s
+172.64.33.177#US 36MB/s
 
-mfa.gov.ua:443#官方-mfa.gov
-www.shopify.com:2087#官方-shopify
-time.is:2083#官方-time.is
-
-cf.tencentapp.cn:2087#域名HK-tencentapp
-saas.sin.fan:2096#域名HK-saas.sin.fan
-dogechain.info:8443#域名-dogechain.info
-
-
-120.79.234.236:443#国内优选荷兰20
-123.57.82.95:443#国内优选1 US
+120.79.234.236:443#国内优选荷兰 100
+123.57.82.95:443#国内优选1 US50 
 120.26.3.169:443#国内优选2 US100
 120.55.183.176:443#国内优选3 US100
 47.92.245.88:443#国内优选4 US22
