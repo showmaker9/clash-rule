@@ -1,4 +1,0 @@
-cf.hjk.de5.net:443#https-US-GOV$https://207.4.85.4:443
-cf.hjk.de5.net:443#https-US住宅$https://173.13.157.60:443
-cf.hjk.de5.net:443#httpUS住宅$http://63.175.157.2:30005
-cf.hjk.de5.net:443#turnTW住宅$turn://61.220.227.32:3478
